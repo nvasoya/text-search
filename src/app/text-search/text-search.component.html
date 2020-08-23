@@ -1,0 +1,25 @@
+
+<div class="toolbar" role="banner">
+  <span style="margin-left:50px;">Text Search</span>
+</div>
+
+<div class="content" role="main">
+  <form name="sForm">
+    <div>
+      <textarea id="txtSource" name="txtSource" #txtSource="ngModel" ref-textarea class="sourceText" [(ngModel)]="textSource" required></textarea>
+      <label *ngIf="txtSource.invalid && (txtSource.dirty || txtSource.touched) && txtSource.errors.required" class="erorrInput">Required</label>
+    </div>
+
+    <div>
+      <input id="txtSearch" name="txtSearch" #txtSearch="ngModel" type="text" class="searchText" [(ngModel)]="textSearch" required> 
+      <label *ngIf="txtSearch.invalid && (txtSearch.dirty || txtSearch.touched) && txtSearch.errors.required" class="erorrInput">Required</label>
+
+      <button type="button" class="searchBtn" (click)="SearchIndex()">Search</button>
+    </div>
+
+    <div>
+      <label>Match Index(s):  {{searchResult}}</label>
+    </div>
+  </form>
+    
+</div>

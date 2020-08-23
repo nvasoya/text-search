@@ -1,0 +1,20 @@
+.sourceText {
+  resize: both;
+  width: 600px;
+  height: 300px;
+}
+
+.searchText {
+  width: 500px;
+  height: 30px;
+}
+
+.searchBtn {
+  width: 80px;
+  margin-left: 20px;
+  height: 30px;
+}
+
+div.content div {
+  margin: 10px;
+}
